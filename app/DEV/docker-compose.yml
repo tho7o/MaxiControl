@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  app:
+    container_name: borrar
+    build: .
+    restart: unless-stopped
+#    expose:
+#      - 4200
+    ports:
+      - 4200:4200
+    volumes:
+      - ./dist:/usr/src/app/dist
+      - .:/usr/src/app
+#    environment:
+#      - VIRTUAL_HOST=zebrands.antoniorodriguez.me,www.zebrands.antoniorodriguez.me
+#      - LETSENCRYPT_HOST=zebrands.antoniorodriguez.me,www.zebrands.antoniorodriguez.me
+#      - LETSENCRYPT_EMAIL=ajrp.jobs@gmail.net
+#    networks:
+#      reverse-proxy-network:
+#        ipv4_address: 21.21.21.145
+
+#networks:
+#  reverse-proxy-network:
+#    external:
+#      name: reverse-proxy-network

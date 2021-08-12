@@ -1,0 +1,28 @@
+<section>
+
+    <!-- NAVBAR -->
+    <div class="bs-example">
+        <nav data-aos-once="true" data-aos="fade-down" data-aos-duration="0" class="navbar navbar-expand-sm navbar-dark bg-dark">
+
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav">
+                    <a data-aos="fade-down" data-aos-duration="500" (click)="goToHome()" data-toggle="collapse" data-target=".navbar-collapse.show" class="nav-item nav-link">{{ componentConstants.HOME }}</a>
+                    <a *ngIf="logged" data-aos="fade-down" data-aos-duration="1000" (click)="goToNew()" data-toggle="collapse" data-target=".navbar-collapse.show" class="nav-item nav-link">{{ componentConstants.ADD_NEW }}</a>
+                    <a *ngIf="logged" data-aos="fade-down" data-aos-duration="1000" (click)="goToDiappers()" data-toggle="collapse" data-target=".navbar-collapse.show" class="nav-item nav-link">{{ componentConstants.DIAPPERS }}</a>
+                    <a *ngIf="logged" data-aos="fade-down" data-aos-duration="1000" (click)="goToBreastFeeding()" data-toggle="collapse" data-target=".navbar-collapse.show" class="nav-item nav-link">{{ componentConstants.BRESTFEEDING }}</a>
+                    <a *ngIf="logged" id='exit' data-aos="fade-down" data-aos-duration="2000" (click)="goToExit()" data-toggle="collapse" data-target=".navbar-collapse.show" class="nav-item nav-link">{{ componentConstants.CLOSE_SESSION }}</a>
+                    <a *ngIf="!logged" id='login' data-aos="fade-down" data-aos-duration="2000" (click)="goToLogin()" data-toggle="collapse" data-target=".navbar-collapse.show" class="nav-item nav-link">{{ componentConstants.LOGIN }}</a>
+                </div>
+            </div>
+
+
+
+
+
+        </nav>
+    </div>
+</section>

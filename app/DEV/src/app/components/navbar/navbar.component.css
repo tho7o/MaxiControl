@@ -1,0 +1,40 @@
+.bg-dark{
+  background: #7e5bff !important;
+}
+
+.bs-example{
+  margin: 0px;
+  width: 100%;
+  position: sticky;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+a.nav-item.nav-link{
+  color: #ffffff;
+  padding-right: 30px;
+  font-size: 18px;
+}
+
+a.nav-item.nav-link:hover{
+  cursor: pointer;
+  text-shadow: 2px 2px 6px rgb(255, 255, 255);
+  -webkit-transition:  box-shadow .3s ease-in;
+  color: rgb(255, 255, 255);  
+}
+
+button.navbar-toggler{
+  border-color: #dcdcdc
+}
+
+#dd{
+  color: white;
+}
+  
+@media (min-width: 576px) {
+  #login, #exit{
+    position:absolute;
+    right: 0 !important;
+  }
+}

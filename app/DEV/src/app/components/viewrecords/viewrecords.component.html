@@ -1,0 +1,68 @@
+<nav>
+  <app-navbar></app-navbar>
+</nav>
+    
+<section>
+  <div class="content">
+    <div class="wrap center">
+      
+      <div data-aos="fade-right" data-aos-duration="500" class="center">
+        <img id='logo' src="../../assets/images/logo.png">
+      </div>
+  
+      <div data-aos="fade-left" data-aos-duration="1000" class="box">
+          <div class='tabla'>
+            <div class="center">
+              <div class="row">
+                <div class="col-4">
+
+                </div> 
+                <div  class="col-4 headerTable">
+                  <h2>Diappers</h2>
+                </div>
+                <div  class="col-4 headerTable">
+                  <button  (click)="goToAddCar()" id='addnew' class="btn btn-primary" >New Record</button>
+                </div>
+
+              </div>
+            </div>
+
+
+            <div *ngIf="status == 'success'" class="alert alert-success" role="alert">
+              {{message}}
+             </div>
+
+            <div *ngIf="status == 'error'"  class="alert alert-danger" role="alert">
+              {{message}}
+            </div>
+
+      
+            <div class="form-group"  >
+
+                <table class="table" >
+                  <thead>
+                    <tr>
+                      <th>Id</th>
+                      <th>Ts</th>
+                      <th>Type</th>
+                    </tr>
+                  </thead>
+      
+                  <tbody style="overflow: auto">
+                    <tr *ngFor="let car of cars">
+                      <td id='year' data-aos="fade-right" data-aos-duration="500" >{{ car.cars_year }}</td>
+                      <td id='model' data-aos="fade-right" data-aos-duration="500" >{{ car.cars_model | titlecase}}</td>
+                      <td id='owner' data-aos="fade-right" data-aos-duration="500" >{{ car.clients_firstname | titlecase}} {{ car.clients_lastname | titlecase }}</td>
+                    </tr>
+                  </tbody>
+              </table>
+
+            </div>
+
+          </div>
+
+      </div>
+    </div>
+  </div>
+  
+</section>

@@ -1,0 +1,140 @@
+.box{
+display: flex;
+align-items: center;
+justify-content: center;
+}
+  
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+background-color: #7e5bff !important;
+border-color: #7e5bff !important;
+color: white !important;
+}
+
+.center{
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.content {
+height: 100%;
+width: 100%;
+flex-direction: column;
+align-items: center;
+justify-content: center;  
+}
+
+.form-group{
+display: flex;
+flex-direction: column;
+width: 100%;
+}
+  
+.form-select{
+width: 200px;
+height: 50px;
+}
+
+.headerTable{
+padding: 0;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.tabla{
+width: 100%;
+}
+
+.row{
+width: 100%;
+}
+
+.wrap{
+margin-top: 80px;
+display: flex;
+flex-direction: column;
+}
+
+button{
+margin: 10px;
+width: 100px;
+height: 45px;
+font-size: 12px;
+}
+
+h2{
+font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+font-size: 1.5rem;
+color: #616161;
+}
+
+label{
+font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+font-size: 1rem;
+color: #616161;
+}
+
+table{
+width: 100%;
+}
+
+td{
+font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+font-size: 0.9rem;
+vertical-align: baseline;
+color: #616161;
+}
+
+th{
+font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+font-size: 0.9rem;
+color: #616161;
+}
+
+#addnew{
+color: #007bff;
+background-color:white;
+border: 1px #007bff solid;
+}
+
+#addnew:hover{
+color: white;
+background-color:#007bff;
+border: 1px #007bff solid;
+}
+
+#brand{
+width: 25%;
+}
+
+#logo{
+width: 100px;
+margin: 30px;
+}
+
+#model{
+width: 25%;
+}
+
+#owner{
+width: 25%;
+}
+
+#year{
+width: 25%;
+}
+
+@media (min-width: 576px) {
+.box{
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 30px;
+width: 900px;
+max-width: 80%;
+height: 300;
+border-radius: 5px;
+border: 1px #f1f1f1 solid;
+}
+}

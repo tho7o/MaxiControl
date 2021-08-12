@@ -1,0 +1,91 @@
+<nav>
+  <app-navbar></app-navbar>
+</nav>
+    
+<section>
+  <div class="content">
+    <div class="wrap center">
+      <div data-aos="fade-right" data-aos-duration="500" class="center">
+        <img id='logo' src="../../assets/images/logo.png">
+      </div>
+  
+      <div data-aos="fade-left" data-aos-duration="1000" class="box">
+        <div class="center dp">
+          <div>
+            <h2>Diappers</h2>
+          </div>
+          <div class="">
+            <button  id='addnew' class="btn btn-primary">Pipi</button>
+            <button  id='addnew2' class="btn btn-primary">Popo</button>
+            <button  id='addnew3' class="btn btn-primary">Both</button>
+
+            <button type="button" class="btn btn-secondary" data-toggle="button" aria-pressed="false" autocomplete="off">
+              Single toggle
+            </button>
+
+
+          </div>
+          
+        </div>
+      
+   
+     
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="wrap center">
+      <div data-aos="fade-left" data-aos-duration="1000" class="box">
+        <div class="center bf">
+              <h2>BreastFeeding</h2>
+
+              <ng-number-picker
+                [(value)]="value"
+                [min]="'5'"
+                [max]="'350'"
+                [step]="'5'"
+                [pickStartAfter]="'500'"
+                [pickTimer]="'100'"
+                [postfix]="'Min'"
+                [buttonsOrientation]="'h'"
+                [size]="'lg'"
+                [showDownButton]="true"
+                [showUpButton]="true"
+                [inputReadOnly]="true"
+                [mouseWheel]="true"
+                [arrowKeys]="true"
+                [placeholder]="'How many'"
+                [customClass]="{'container': '', 'up': '', 'down': '', 'prefix': '', 'postfix': ''}"
+                (valueChange)="onChangeMinutes($event)"
+                
+                ></ng-number-picker>
+          
+              <button  (click)="goToNew()" id='addnew' class="btn btn-primary">Set</button>
+     
+
+        </div>
+      
+
+    
+
+          
+          
+        
+
+
+
+
+      
+
+
+
+
+      </div>
+
+    
+
+                          
+    </div>
+  </div>
+</section>

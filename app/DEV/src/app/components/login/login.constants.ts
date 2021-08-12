@@ -1,0 +1,9 @@
+export const SIGN_IN  = 'Iniciar Sesión';
+export const EMAIL = 'Usuario';
+export const PASSWORD = 'Contraseña';
+export const BACK = 'Atrás';
+export const IN = 'Entrar';
+export const BAD_RESPONSE = 'Error de respuesta del servidor';
+export const WRONG_CREDENTIALS = 'Usuario o contraseña incorrecta';
+export const NOT_CREDENTIALS = 'Ingrese su correo y contraseña';
+export const LOGGED ='Has entrado satisfactoriamente';

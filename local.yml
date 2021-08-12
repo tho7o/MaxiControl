@@ -1,0 +1,39 @@
+version: '3.7'
+
+services:
+
+  db:
+    container_name: maxi-mysql-dev
+    image: mysql:latest
+    restart: unless-stopped
+    volumes:
+      - ./mysql/mysql-data/db:/var/lib/mysql
+      - ./mysql/setup.sql:/docker-entrypoint-initdb.d/setup.sql
+#    expose:
+#      - 3306
+    ports:
+      - 3306:3306
+    environment:
+      - TZ=America/New_York
+      - MYSQL_DATABASE=${DB_NAME}
+      - MYSQL_USER=${DB_USER}
+      - MYSQL_PASSWORD=${DB_PWD}
+      - MYSQL_ROOT_PASSWORD=${DB_ROOT_PWD}
+
+  api:
+    depends_on:
+      - db
+    container_name: maxi-api-dev
+    build: ./api
+    restart: unless-stopped
+    ports: 
+      - 3800:3800
+    environment:
+      - TZ=America/New_York
+      - NAME_DB=${DB_NAME}
+      - USER_DB=${DB_USER}
+      - PASSWORD_DB=${DB_PWD}
+      - HOST_DB=db
+      - PORT_DB=3306
+      - DB_CONNECTION_LIMIT=5
+      - JWT_PWD=${JWT_PWD}
