@@ -14,17 +14,12 @@
           <div>
             <h2>Diappers</h2>
           </div>
-          <div class="">
-            <button  id='addnew' class="btn btn-primary">Pipi</button>
-            <button  id='addnew2' class="btn btn-primary">Popo</button>
-            <button  id='addnew3' class="btn btn-primary">Both</button>
-
-            <button type="button" class="btn btn-secondary" data-toggle="button" aria-pressed="false" autocomplete="off">
-              Single toggle
-            </button>
-
-
+          <div class="">        
+            <mat-button-toggle (change)="onChangeDiapper('1')">Pis!</mat-button-toggle>
+            <mat-button-toggle (change)="onChangeDiapper('2')">Pup!</mat-button-toggle>
           </div>
+
+          <button (click)="setDiapper()" class="btn btn-primary">Set Diapper</button>
           
         </div>
       
@@ -42,7 +37,7 @@
 
               <ng-number-picker
                 [(value)]="value"
-                [min]="'5'"
+                [min]="'0'"
                 [max]="'350'"
                 [step]="'5'"
                 [pickStartAfter]="'500'"
@@ -61,7 +56,7 @@
                 
                 ></ng-number-picker>
           
-              <button  (click)="goToNew()" id='addnew' class="btn btn-primary">Set</button>
+              <button (click)="setBreastFeeding()" class="btn btn-primary">Set Breastfeeding</button>
      
 
         </div>

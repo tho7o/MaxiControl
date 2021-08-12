@@ -44,6 +44,10 @@ import { BreastfeedingComponent } from './components/breastfeeding/breastfeeding
 //NUMBER PICKER
 import {NumberPickerModule} from 'ng-number-picker';
 
+//TOGGLE BUTTONS
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+
+
 const MATERIAL_MODULE = [
   MatProgressSpinnerModule,
   MatIconModule,
@@ -68,6 +72,7 @@ const MATERIAL_MODULE = [
   imports: [
     BrowserAnimationsModule,  // ANIMATIONS
     NumberPickerModule, //number picker
+    MatButtonToggleModule,
     AppRoutingModule,
     CommonModule,
     routing,
