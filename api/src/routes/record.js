@@ -9,11 +9,11 @@ const recordController = require ('../controllers/record');
 // api.get('/test', md_auth.ensureAuth, recordController.test);
 
 //Endpoints breastfeeding
-api.post('/breastfeedings/set', md_auth.ensureAuth, recordController.setBreastFeeding);
+api.post('/breastfeedings', md_auth.ensureAuth, recordController.setBreastFeeding);
 api.get('/breastfeedings', md_auth.ensureAuth, recordController.getBreastFeedings);
 
 //Endpoints diappers
-api.post('/diappers/set', md_auth.ensureAuth, recordController.setDiapper);
+api.post('/diappers', md_auth.ensureAuth, recordController.setDiapper);
 api.get('/diappers', md_auth.ensureAuth, recordController.getDiappers);
 
 module.exports = api;

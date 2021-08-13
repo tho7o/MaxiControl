@@ -49,10 +49,10 @@
                     </thead>
         
                     <tbody style="overflow: auto">
-                      <tr *ngFor="let car of cars">
-                        <td id='year' data-aos="fade-right" data-aos-duration="500" >{{ car.cars_year }}</td>
-                        <td id='model' data-aos="fade-right" data-aos-duration="500" >{{ car.cars_model | titlecase}}</td>
-                        <td id='owner' data-aos="fade-right" data-aos-duration="500" >{{ car.clients_firstname | titlecase}} {{ car.clients_lastname | titlecase }}</td>
+                      <tr *ngFor="let diapper of diappers.slice().reverse() ">
+                        <td id='year' data-aos="fade-right" data-aos-duration="500" >{{ diapper.diapper_id }}</td>
+                        <td id='model' data-aos="fade-right" data-aos-duration="500" >{{ diapper.diapper_created}}</td>
+                        <td id='owner' data-aos="fade-right" data-aos-duration="500" >{{ diapper.diapper_type}}</td>
                       </tr>
                     </tbody>
                 </table>

@@ -35,7 +35,6 @@ async function validateTokenUser(req, res){
   return res.status(200).send({status:false});
 }
 
-
 // setBreastFeeding
 function setBreastFeeding (req, res){
     const params = req.body;
@@ -62,7 +61,7 @@ function setBreastFeeding (req, res){
 
 // getBreastFeeding
 function getBreastFeedings (req, res){
-    const params = req.body;
+    // const params = req.body;
     const sql = "SELECT * FROM breast_feedings"
     pool.getConnection((err, conn) => {
         conn.query(sql, (err, breastFeedings) => {
@@ -99,7 +98,7 @@ function setDiapper (req, res){
 
 // getDiapper
 function getDiappers (req, res){
-    const params = req.body;
+    // const params = req.body;
     const sql = "SELECT * FROM diappers"
     pool.getConnection((err, conn) => {
         conn.query(sql, (err, diappers) => {

@@ -44,7 +44,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
 
 
-# user: maximiliano
-# pass: 12345
+# User: maximiliano
+# Pass: 12345
 INSERT INTO `users` (`users_firstname`, `users_lastname`, `users_email`, `users_password`)
 VALUES ('admin', 'admin', 'maximiliano', '$2a$10$ykgAZ1slOosaAtcJlLFXvepvNwyQb5Gz1gCvrwLwvzcUW6E2iX2Te');

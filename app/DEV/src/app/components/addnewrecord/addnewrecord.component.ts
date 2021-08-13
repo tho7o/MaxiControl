@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as addnewrecordConstants from './addnewrecord.constants';
+import { MainService } from '../../services/main.service';
 
 @Component({
   selector: 'app-addnewrecord',
@@ -10,30 +11,39 @@ export class AddnewrecordComponent implements OnInit {
   private pis: boolean = false;
   private pop: boolean = false;
   private bfMinutes: number = 0;
+  private diapperType : number = 0;
 
-  constructor() { }
+  constructor(
+    private _mainService: MainService
+  ) { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   onChangeMinutes(minutes){
-    this.bfMinutes = minutes
-    console.log('minutes: ', this.bfMinutes);
+    this.bfMinutes = minutes;
   }
 
   onChangeDiapper(value){
-    if (value == 1 ) this.pis = (this.pis) ? false : true
-    if (value == 2 ) this.pop = (this.pop) ? false : true
-
-    console.log('pis: ', this.pis);
-    console.log('pop: ', this.pop);
+    if (value == 1 ) this.pis = (this.pis) ? false : true;
+    if (value == 2 ) this.pop = (this.pop) ? false : true;
   }
 
   setBreastFeeding(){
-    console.log('ok bf');
+    this._mainService.setBreastFeeding(this.bfMinutes).subscribe(
+      response => {
+        // console.log(response);
+      });
   }
 
   setDiapper(){
-    console.log('ok dp');
+    this.diapperType = (this.pis && this.pop) ? 3 : this.diapperType;
+    this.diapperType = (!this.pis && this.pop) ? 2 : this.diapperType;
+    this.diapperType = (this.pis && !this.pop) ? 1 : this.diapperType;
+    // console.log(this.diapperType);
+
+    this._mainService.setDiapper(this.diapperType).subscribe(
+      response => {
+        // console.log(response);
+      });
   }
 }
