@@ -37,7 +37,7 @@ import { MatPaginatorIntl } from "@angular/material/paginator";
 import { MatButtonModule } from '@angular/material/button';
 import { FooterComponent } from './components/footer/footer.component';
 import { AddnewrecordComponent } from './components/addnewrecord/addnewrecord.component';
-import { ViewrecordsComponent } from './components/viewrecords/viewrecords.component';
+// import { ViewrecordsComponent } from './components/viewrecords/viewrecords.component';
 import { DiappersComponent } from './components/diappers/diappers.component';
 import { BreastfeedingComponent } from './components/breastfeeding/breastfeeding.component';
 
@@ -65,7 +65,7 @@ const MATERIAL_MODULE = [
     ErrorComponent,
     FooterComponent,
     AddnewrecordComponent,
-    ViewrecordsComponent,
+    // ViewrecordsComponent,
     DiappersComponent,
     BreastfeedingComponent
   ],

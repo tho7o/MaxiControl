@@ -1,3 +1,4 @@
 app/DEV/node_modules
+app/DEV/build
 api/src/node_modules
 mysql/mysql-data
