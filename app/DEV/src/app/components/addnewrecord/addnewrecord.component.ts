@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import * as addnewrecordConstants from './addnewrecord.constants';
 import { MainService } from '../../services/main.service';
 
+import Swal from 'sweetalert2/dist/sweetalert2.js';  
+
 @Component({
   selector: 'app-addnewrecord',
   templateUrl: './addnewrecord.component.html',
@@ -32,6 +34,7 @@ export class AddnewrecordComponent implements OnInit {
     this._mainService.setBreastFeeding(this.bfMinutes).subscribe(
       response => {
         // console.log(response);
+        Swal.fire('BreastFeeding Setted!', '', 'success')  
       });
   }
 
@@ -43,6 +46,7 @@ export class AddnewrecordComponent implements OnInit {
 
     this._mainService.setDiapper(this.diapperType).subscribe(
       response => {
+        Swal.fire('Diapper Setted!', '', 'success')  
         // console.log(response);
       });
   }
