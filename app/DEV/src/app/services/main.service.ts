@@ -2,7 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import { GLOBAL } from './global';
-import { map } from 'rxjs/operators';
+// import { map } from 'rxjs/operators';
+import 'rxjs/add/operator/map';
 
 @Injectable()
 export class MainService {

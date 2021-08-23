@@ -15,7 +15,7 @@ import { ErrorComponent } from './components/error/error.component';
 
 
 const appRoutes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', component: HomeComponent, canActivate:[UserGuard] },
   { path: 'login', component: LoginComponent },
   { path: 'new', component: AddnewrecordComponent, canActivate:[UserGuard] },
   { path: 'breastfeeding', component: BreastfeedingComponent, canActivate:[UserGuard] },
